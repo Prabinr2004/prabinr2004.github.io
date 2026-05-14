@@ -15,15 +15,16 @@
     <script src="https://kit.fontawesome.com/0850574f00.js" crossorigin="anonymous"></script>
 </head>
 <body>
+ 
+<!-- Particle network canvas — fixed full-page background -->
+<canvas id="particleCanvas"></canvas>
+ 
 <div id="header">
-    <!-- Particle network canvas -->
-    <canvas id="particleCanvas"></canvas>
-    
     <!-- Red announcement banner -->
     <div id="announcement-banner">
         <p>🎓 Currently seeking Summer 2026 research opportunities and internships in Data Science, ML, and Digital Marketing.</p>
     </div>
-
+ 
     <!-- Header content -->
     <div class="header-content">
         <!-- Navigation bar -->
@@ -32,14 +33,15 @@
             <ul id="sidemenu">
                 <li><a href='#header'>Home</a></li>
                 <li><a href='#about'>About</a></li>
-                <li><a href='#Services'>Services</a></li>
+                <li><a href='#Services'>Skills</a></li>
+                <li><a href='#certifications'>Certifications</a></li>
                 <li><a href='#portfolio'>Portfolio</a></li>
                 <li><a href='#contact'>Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
-
+ 
         <!-- Main hero content container -->
         <div class="hero-main">
             <!-- Left side: Hero text -->
@@ -48,28 +50,34 @@
                 <h1 class="hero-heading">
                     Hi, I'm <span class="text-blue">Prabin</span> <span class="text-blue">Roka</span><br>From <span class="text-nepal">Nepal</span>.
                 </h1>
-
+ 
                 <!-- Typewriter effect -->
                 <p class="typewriter-line">
                     <span id="typewriter"></span><span class="cursor">|</span>
                 </p>
-
+ 
                 <!-- Tagline -->
                 <p class="hero-tagline">Building at the intersection of data, algorithms, and digital strategy.</p>
-
+ 
                 <!-- Status badge -->
                 <div class="status-badge">
                     <div class="pulse-dot"></div>
                     <span>Open to Summer 2026 internships</span>
                 </div>
-
+ 
                 <!-- CTA buttons -->
                 <div class="cta-buttons">
                     <a href="#portfolio" class="btn btn-primary">View my work</a>
-                    <a href="Resume_s.pdf" class="btn btn-secondary" download>Download CV</a>
+                    <div class="cv-dropdown">
+                         <button class="btn btn-secondary">Download CV ▾</button>
+                        <div class="cv-dropdown-menu">
+                             <a href="certificates/Prabin_Roka_CS_Resume.pdf" download>CS & Data Science</a>
+                             <a href="certificates/Prabin_Roka_Marketing_Resume.pdf" download>Digital Marketing</a>
+                       </div>
+                    </div>
                 </div>
             </div>
-
+ 
             <!-- Right side: Floating code card (hidden on mobile) -->
             <div class="code-card">
                 <div class="code-header">prabin_roka.py</div>
@@ -88,7 +96,7 @@
         <span class="code-keyword">return</span> <span class="code-string">"Let's build!"</span></code></pre>
             </div>
         </div>
-
+ 
         <!-- Stats bar at bottom -->
         <div class="stats-bar">
             <div class="stat">
@@ -100,17 +108,17 @@
                 <span class="stat-label">Dean's List</span>
             </div>
             <div class="stat">
-                <span class="stat-number">2</span>
+                <span class="stat-number">3</span>
                 <span class="stat-label">Majors</span>
             </div>
             <div class="stat">
-                <span class="stat-number">2+</span>
+                <span class="stat-number">6</span>
                 <span class="stat-label">Projects</span>
             </div>
         </div>
     </div>
 </div>
-
+ 
 <div id="about">
     <div class="container">
         <div class="row">
@@ -120,7 +128,7 @@
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>Hello! I'm Prabin Roka — a student, builder, and curious mind from Nepal, a country known for its breathtaking landscapes and rich cultural heritage.</p>
-
+ 
                 <br>
                 
                 <p>I'm currently at the College of Idaho, pursuing a double major in Computer Science & Mathematics and Digital Marketing, with a minor in Arts. It's an unconventional combination, but it reflects exactly how I think — I'm drawn to problems that sit at the intersection of technology, creativity, and human experience. My academic focus leans toward Machine Learning and Natural Language Processing, and I've maintained a 3.768 GPA with Dean's List recognition three years running.</p>
@@ -150,14 +158,15 @@
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Programming Languages</span><br>Python (Proficient), R (Proficient), SQL (Intermediate), HTML/CSS (Intermediate), C++ (Basic)</li>
-                            <li><span>Data Analysis & Machine Learning</span><br>Linear & Multiple Regression, K-Nearest Neighbors, Logistic Regression, Cross-Validation, Model Comparison, Hypothesis Testing</li>
-                            <li><span>Libraries & Frameworks</span><br>tidyverse, tidymodels, ggplot2, FastAPI</li>
-                            <li><span>Digital Marketing</span><br>SEO, Keyword Research, Google Search & Display Ads, Consumer Behavior Analysis, Marketing Communications</li>
+                            <li><span>Data Analysis & Machine Learning</span><br>Linear & Multiple Regression, K-Nearest Neighbors, Logistic Regression, Cross-Validation, Model Comparison, Hypothesis Testing, Random Forest, Gradient Boosted Trees, AIC Feature Selection, Feature Engineering, EDA</li>
+                            <li><span>Libraries & Frameworks</span><br>tidyverse, tidymodels, ggplot2, FastAPI, LLM APIs (OpenRouter, Anthropic, OpenAI)</li>
+                            <li><span>Digital Marketing</span><br>SEO, Keyword Research, Google Search & Display Ads, Consumer Behavior Analysis, Marketing Communications, Google Analytics, HubSpot, Canva, Ubersuggest, Long Tail Pro, A/B Testing, KPI & ROI Analysis, Landing Page Optimization</li>
                             <li><span>Tools & Platforms</span><br>Git (Proficient), Tableau (Proficient), Microsoft Office Suite (Proficient), SQLite, POS Systems</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
+                            <li><span>Campus Safety Office Assistant — The College of Idaho, Caldwell, ID</span><br>Mar 2024 – Present<br><br>Serve as first point of contact for campus safety calls handling emergencies, security concerns, and general inquiries. Support officers during routine patrols and monitor building access; developed strong situational judgment in a fast-paced on-call setting.</li>
                             <li><span>Data Entry Operator — Nepal Red Cross Society, Kathmandu</span><br>August 2022 – September 2022<br><br>Managed and entered donor health records for blood bank operations, maintaining accuracy across a high-volume dataset. Contributed to a nationwide blood donation campaign through meticulous data handling and quality checks.</li>
                         </ul>
                     </div>
@@ -178,23 +187,55 @@
         </div>
     </div>
 </div>
-
+ 
 <div id="extras">
     <div class="container">
         <div class="extras-grid">
             <div class="extras-box">
-                <h3>Relevant Coursework</h3>
-                <ul>
-                    <li>Statistical Machine Learning</li>
-                    <li>Design and Analysis of Algorithms</li>
-                    <li>Multiple Regression Analysis</li>
-                    <li>Data Analytics</li>
-                    <li>Linear Algebra</li>
-                    <li>Discrete Mathematics</li>
-                    <li>Analytical Physics</li>
-                    <li>Computer Science I & II</li>
-                </ul>
-            </div>
+    <h3>Relevant Coursework</h3>
+    <div class="course-tabs">
+        <span class="course-tab active-course-tab" onclick="opencoursetab(event,'cs')">CS & Software</span>
+        <span class="course-tab" onclick="opencoursetab(event,'data')">Data & Math</span>
+        <span class="course-tab" onclick="opencoursetab(event,'marketing')">Marketing & Business</span>
+        <span class="course-tab" onclick="opencoursetab(event,'arts')">Arts & Design</span>
+    </div>
+    <div class="course-content active-course" id="cs">
+        <ul>
+            <li>Computer Science I & II</li>
+            <li>Software Engineering & Senior Design</li>
+            <li>Design and Analysis of Algorithms</li>
+            <li>Introduction to Computer Architecture</li>
+            <li>Formal Languages and Automata</li>
+        </ul>
+    </div>
+    <div class="course-content" id="data">
+        <ul>
+            <li>Statistical Machine Learning</li>
+            <li>Multiple Regression Analysis (MAT 212)</li>
+            <li>Data Analytics</li>
+            <li>Linear Algebra</li>
+            <li>Introduction to Proofs / Discrete Mathematics</li>
+            <li>Applied & Single Variable Calculus</li>
+        </ul>
+    </div>
+    <div class="course-content" id="marketing">
+        <ul>
+            <li>Digital Marketing Essentials</li>
+            <li>Social Media Marketing</li>
+            <li>Consumer Behavior</li>
+            <li>Principles of Marketing</li>
+            <li>Financial Accounting</li>
+            <li>Principles of Economics</li>
+        </ul>
+    </div>
+    <div class="course-content" id="arts">
+        <ul>
+            <li>Introduction to Digital Art</li>
+            <li>Ways of Seeing</li>
+            <li>Ancient to Medieval Art</li>
+        </ul>
+    </div>
+</div>
             <div class="extras-box">
                 <h3>Languages</h3>
                 <ul>
@@ -211,7 +252,7 @@
         </div>
     </div>
 </div>
-
+ 
 <div id="Services">
     <div class="container">
         <h1 class="sub-title">What I Do</h1>
@@ -219,31 +260,31 @@
             <div>
                 <i class="fa-solid fa-chart-line"></i>
                 <h2>Data Science & ML</h2>
-                <p>Built around Python, R, and statistical modeling. Experienced in regression analysis, classification, cross-validation, and building ML pipelines using tidymodels. Comfortable taking a dataset from raw to insight.</p>
+                <p>Built around Python, R, and statistical modeling. Experienced in regression, classification, Random Forest, and building end-to-end ML pipelines using tidymodels. Worked with real-world datasets across census data, admissions records, and financial outcomes.</p>
                 <a href="#contact">Get in touch</a>
             </div>
             <div>
                 <i class="fa-solid fa-globe"></i>
                 <h2>Web Development</h2>
-                <p>Experienced in HTML, CSS, JavaScript, and building full-stack applications. Built a production-ready web app using FastAPI with a persistent SQLite backend and a dynamic frontend.</p>
+                <p>Experienced in HTML, CSS, JavaScript, and building full-stack applications. Built a production-ready AI-powered web app using FastAPI, SQLite, and LLM APIs (OpenRouter, Anthropic). Comfortable across both frontend and backend.</p>
                 <a href="#contact">Get in touch</a>
             </div>
             <div>
                 <i class="fa-solid fa-bullhorn"></i>
                 <h2>Digital Marketing</h2>
-                <p>Skilled in SEO, keyword research, Google Search and Display ad campaigns, consumer behavior analysis, and marketing communications. Combines analytical thinking with creative strategy.</p>
+                <p>Hands-on experience managing Google Ads campaigns (Search, Display, Shopping, Remarketing) with simulated real-world ad budgets. Skilled in A/B testing, landing page optimization, SEO, keyword research, and KPI/ROI analysis. Certified by Google, HubSpot, and Stukent (5 certifications).</p>
                 <a href="#contact">Get in touch</a>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Programming & Algorithms</h2>
-                <p>Proficient in Python and R, with working knowledge of SQL, C++, and HTML. Coursework includes Design and Analysis of Algorithms, Discrete Mathematics, and Linear Algebra.</p>
+                <p>Proficient in Python and R, with working knowledge of SQL, C++, JavaScript, and HTML. Strong foundations in algorithms, discrete math, and linear algebra. Experienced integrating LLM APIs and building agentic systems.</p>
                 <a href="#contact">Get in touch</a>
             </div>
         </div>
     </div>
 </div>
-
+ 
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
@@ -265,11 +306,11 @@
                 <div class="work-info">
                     <h3>MAT 212 Statistical Research</h3>
                     <div class="tab-titles" style="margin: 15px 0 25px;">
-                        <p class="tab-links active-link" onclick="opentab2('tips')">Tips Analysis</p>
+                        <p class="tab-links active-link" onclick="opentab2('tips')">EDA of Restaurant Tipping Behavior</p>
                         <p class="tab-links" onclick="opentab2('finwellbeing')">Financial Wellbeing</p>
                     </div>
                     <div class="tab-contents active-tab" id="tips">
-                        <p>Analyzed the TIPS dataset to decode restaurant tipping behavior. Explored how bill size, party size, time of day, and other factors influence tip amounts and percentages. Built and compared Ridge Regression and KNN models after feature selection — achieving R² of 0.876 for tip percentage prediction and 86.5% accuracy for tip category classification.</p>
+                        <p>Conducted comprehensive exploratory data analysis on restaurant tipping patterns, building scatter plots, bar charts, and box plots to surface behavioral trends. Produced a reproducible HTML report in Quarto with integrated code, visualizations, and business-focused narrative.</p>
                         <div class="work-tags" style="margin-top:15px;">
                             <span>R</span>
                             <span>ggplot2</span>
@@ -293,10 +334,84 @@
                     </div>
                 </div>
             </div>
+            <div class="work">
+                <div class="work-info">
+                    <h3>Predictive Modeling Hackathon — U.S. Census Income Classification</h3>
+                    <p>Built an end-to-end ML pipeline to predict income brackets from U.S. Census demographic data. Trained and tuned Random Forest models, addressed class imbalance to improve recall, and documented the full workflow in a reproducible Quarto report.</p>
+                    <div class="work-tags" style="margin-top:15px; margin-bottom:12px;">
+                        <span>R</span>
+                        <span>tidymodels</span>
+                        <span>Random Forest</span>
+                        <span>Quarto</span>
+                    </div>
+                    <p style="margin-top: 12px; font-size: 0.9em; color: #888;"><strong>Course:</strong> MAT427 Statistical Machine Learning</p>
+                    <a href="Predictive Modeling Hackathon — U.S. Census Income Classification.html" target="_blank" class="btn btn2" style="margin:20px 0 0;">View Analysis</a>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work-info">
+                    <h3>College Admissions Predictive Modeling</h3>
+                    <p>Analyzed 3 years of anonymized College of Idaho admissions data to predict enrollment likelihood and identify key influencing factors. Focused on model interpretability — explaining the why behind predictions — using merged multi-year datasets with sparse categorical variables.</p>
+                    <div class="work-tags" style="margin-top:15px; margin-bottom:12px;">
+                        <span>R</span>
+                        <span>tidymodels</span>
+                        <span>Logistic Regression</span>
+                        <span>Quarto</span>
+                    </div>
+                    <p style="margin-top: 12px; font-size: 0.9em; color: #888;"><strong>Course:</strong> MAT427 Statistical Machine Learning</p>
+                    <a href="College Admissions Predictive Modeling.html" target="_blank" class="btn btn2" style="margin:20px 0 0;">View Analysis</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
+ 
+<div id="certifications">
+    <div class="container">
+        <h1 class="sub-title">Certifications</h1>
+        <div class="certifications-grid">
+            <div class="cert-card" onclick="openCertModal('certificates/Google Display Ads Certification.png')">
+                <h3>Google Ads Display Certification</h3>
+                <p><strong>Google</strong></p>
+                <p class="cert-date">Apr 2026 – Apr 2027</p>
+                <p class="cert-link">Click to view certificate</p>
+            </div>
+            <div class="cert-card" onclick="openCertModal('certificates/Social Media Certified-Hubspot.png')">
+                <h3>HubSpot Social Media Certification</h3>
+                <p><strong>HubSpot Academy</strong></p>
+                <p class="cert-date">Sep 2025 – Oct 2027</p>
+                <p class="cert-link">Click to view certificate</p>
+            </div>
+            <div class="cert-card" onclick="openCertModal('certificates/Digital Marketing Certification.pdf')">
+                <h3>Digital Marketing Certification</h3>
+                <p><strong>Stukent</strong></p>
+                <p class="cert-date">May 2026</p>
+                <p class="cert-link">Click to view certificate</p>
+            </div>
+            <div class="cert-card" onclick="openCertModal('certificates/Digital _Marketing_Simternship.pdf')">
+                <h3>Digital Marketing Simternship</h3>
+                <p><strong>Stukent (Buhi Supply Co.)</strong></p>
+                <p class="cert-date">Apr 2026</p>
+                <p class="cert-link">Click to view certificate</p>
+            </div>
+            <div class="cert-card" onclick="openCertModal('certificates/Social Media Simternship.pdf')">
+                <h3>Social Media Simternship</h3>
+                <p><strong>Stukent</strong></p>
+                <p class="cert-date">Dec 2025</p>
+                <p class="cert-link">Click to view certificate</p>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Certification Modal -->
+<div id="certModal" class="cert-modal" onclick="if(event.target === this) closeCertModal()">
+  <div class="cert-modal-content">
+    <span class="cert-modal-close" onclick="closeCertModal()">&times;</span>
+    <div id="certModalBody"></div>
+  </div>
+</div>
+ 
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -310,7 +425,13 @@
                     <a href="https://github.com/Prabinr2004" target="_blank"><i class="fa-brands fa-square-github"></i></a>
                     <a href="https://x.com/PrabinRoka26045" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
-                <a href="Resume_s.pdf" class="btn btn2">View CV</a>
+                <div class="cv-dropdown">
+                    <button class="btn btn2">View CV ▾</button>
+                    <div class="cv-dropdown-menu">
+                        <a href="certificates/Prabin_Roka_CS_Resume.pdf" target="_blank">CS & Data Science</a>
+                        <a href="certificates/Prabin_Roka_Marketing_Resume.pdf" target="_blank">Digital Marketing</a>
+                    </div>
+                </div>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -318,16 +439,18 @@
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
+                </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
 </div>
-
-
+ 
+<div class="copyright">
+    <p>Copyright © 2024-2026 Prabin Roka. <i class="fa-regular fa-star"></i> All Rights Reserved</p>
+</div>
+ 
 <script>
-
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
     
@@ -341,67 +464,98 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-
+ 
     var tablinks2 = document.querySelectorAll("#portfolio .tab-links");
     var tabcontents2 = document.querySelectorAll("#portfolio .tab-contents");
-
+ 
     function opentab2(tabname){
         tablinks2.forEach(link => link.classList.remove("active-link"));
         tabcontents2.forEach(content => content.classList.remove("active-tab"));
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+    
+    function opencoursetab(event, tabname) {
+         document.querySelectorAll('.course-content').forEach(el => el.classList.remove('active-course'));
+         document.querySelectorAll('.course-tab').forEach(el => el.classList.remove('active-course-tab'));
+        document.getElementById(tabname).classList.add('active-course');
+        event.currentTarget.classList.add('active-course-tab');
+   }
+    // ==================== CERTIFICATION MODAL ====================
+    function openCertModal(filePath) {
+        const modal = document.getElementById('certModal');
+        const modalBody = document.getElementById('certModalBody');
+        modalBody.innerHTML = '';
+ 
+        if (filePath.endsWith('.png')) {
+            modalBody.innerHTML = `<img src="${filePath}" style="width: 100%; max-height: 80vh; object-fit: contain;">`;
+        } else if (filePath.endsWith('.pdf')) {
+            modalBody.innerHTML = `<iframe src="${filePath}" style="width: 100%; height: 80vh; border: none;"></iframe>`;
+        }
+ 
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+ 
+    function closeCertModal() {
+        const modal = document.getElementById('certModal');
+        modal.style.display = 'none';
+        document.getElementById('certModalBody').innerHTML = '';
+        document.body.style.overflow = 'auto';
+    }
+ 
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeCertModal();
+        }
+    });
 </script>
-
+ 
 <script>
-
     var sidemenu = document.getElementById("sidemenu");
-
+ 
     function openmenu(){
         sidemenu.classList.add("open");    
     }
     function closemenu(){
         sidemenu.classList.remove("open");
     }    
-
 </script>
-
+ 
 <script>
     // ==================== PARTICLE NETWORK ANIMATION ====================
     const canvas = document.getElementById('particleCanvas');
     const ctx = canvas.getContext('2d');
-
-    // Set canvas size
+ 
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
-    // Particle class
+ 
     class Particle {
         constructor() {
+            this.reset();
+        }
+ 
+        reset() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
             this.vx = (Math.random() - 0.5) * 0.5;
             this.vy = (Math.random() - 0.5) * 0.5;
             this.radius = Math.random() * 1.5 + 0.5;
         }
-
+ 
         update() {
             this.x += this.vx;
             this.y += this.vy;
-
-            // Bounce off walls
             if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
             if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-            // Keep in bounds
             this.x = Math.max(0, Math.min(canvas.width, this.x));
             this.y = Math.max(0, Math.min(canvas.height, this.y));
         }
-
+ 
         draw() {
             ctx.fillStyle = 'rgba(96, 165, 250, 0.5)';
             ctx.beginPath();
@@ -409,15 +563,13 @@
             ctx.fill();
         }
     }
-
-    // Create particles
+ 
     const particles = [];
-    const particleCount = Math.floor(Math.min(window.innerWidth, window.innerHeight) / 150);
+    const particleCount = Math.floor(Math.min(window.innerWidth, window.innerHeight) / 10);
     for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
     }
-
-    // Draw connection lines
+ 
     function drawConnections() {
         const maxDistance = 200;
         for (let i = 0; i < particles.length; i++) {
@@ -425,7 +577,6 @@
                 const dx = particles[i].x - particles[j].x;
                 const dy = particles[i].y - particles[j].y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-
                 if (distance < maxDistance) {
                     const opacity = (1 - distance / maxDistance) * 0.3;
                     ctx.strokeStyle = `rgba(96, 165, 250, ${opacity})`;
@@ -438,27 +589,19 @@
             }
         }
     }
-
-    // Animation loop
+ 
     function animate() {
-        // Clear canvas with semi-transparent background to create fade effect
-        ctx.fillStyle = 'rgba(10, 14, 26, 0.05)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Update and draw particles
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         particles.forEach(particle => {
             particle.update();
             particle.draw();
         });
-
-        // Draw connections
         drawConnections();
-
         requestAnimationFrame(animate);
     }
-
+ 
     animate();
-
+ 
     // ==================== TYPEWRITER EFFECT ====================
     const typewriterElement = document.getElementById('typewriter');
     const phrases = [
@@ -467,22 +610,19 @@
         'Building AI-powered apps',
         'College of Idaho | Class of 2027'
     ];
-
+ 
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let typingSpeed = 50;
     let deletingSpeed = 30;
     let pauseTime = 2000;
-
+ 
     function typewriter() {
         const currentPhrase = phrases[phraseIndex];
-
         if (!isDeleting) {
-            // Typing
             typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
             charIndex++;
-
             if (charIndex === currentPhrase.length) {
                 isDeleting = true;
                 setTimeout(typewriter, pauseTime);
@@ -490,10 +630,8 @@
             }
             setTimeout(typewriter, typingSpeed);
         } else {
-            // Deleting
             typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
             charIndex--;
-
             if (charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -503,31 +641,29 @@
             setTimeout(typewriter, deletingSpeed);
         }
     }
-
-    // Start typewriter when page loads or after a short delay
+ 
     setTimeout(typewriter, 500);
 </script>
+ 
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxRN0jlDB3eIHOPuNEFjCn4Ay-tlCFYo_xGkNqCAokeyAqrmCfRYdUjOSsofWm04RWtzA/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
   
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-            msg.innerHTML = ""
-        },5000)
-        form.reset()
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
     })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-  <div class="copyright">
-    <p>Copyright © 2024-2026 Prabin Roka. <i class="fa-regular fa-star"></i> All Rights Reserved</p>
-  </div>
-
+</script>
+ 
 </body> 
 </html>
+ 
