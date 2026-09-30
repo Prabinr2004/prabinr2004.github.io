@@ -8,7 +8,7 @@
 
 <meta name="author" content="Prabin Roka">
 
-<title>Hack-a-thon</title>
+<title>U.S. Census Income Classification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4374,7 +4374,7 @@ window.onload = function() {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Hack-a-thon</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">U.S. Census Income Classification</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -4399,10 +4399,10 @@ window.onload = function() {
 
 <section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>In this project, we aim to predict whether an individual earns more than $50,000 annually using U.S. Census demographic data. The problem is a binary classification task involving features like age, education, occupation, hours worked, and capital gains/losses. Accurately predicting high-income individuals has applications in targeted marketing, public policy, and economic research.</p>
+<p>In this project, we aim to predict whether an individual earns more than $50,000 annually using U.S. Census demographic data. The problem is a binary classification task involving features like age, education, occupation, hours worked, and capital gains/losses. The project gave me practice preparing demographic data, comparing classification models, and interpreting evaluation results.</p>
 <p>The dataset consists of:</p>
 <ul>
-<li><p><strong>Training set</strong>: 35,000 rows and 15 demographic columns, including the target (<code>income</code>)</p></li>
+<li><p><strong>Training set</strong>: 35,000 records with demographic predictors, an imported row identifier, and the target (<code>income</code>)</p></li>
 <li><p><strong>Test set</strong>: 13,840 rows with the same features (excluding <code>income</code>)</p></li>
 </ul>
 </section>
@@ -4455,7 +4455,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <li><p>Converted all instances of ” ?” in character columns to <code>NA</code></p></li>
 <li><p>Standardized column names using <code>clean_names()</code></p></li>
 <li><p>Fixed inconsistent formatting in the <code>income</code> column and converted it to a factor with levels 0 (<code>&lt;=50K</code>) and 1 (<code>&gt;50K</code>)</p></li>
-<li><p>Checked for missing values — none remained after cleanup</p></li>
+<li><p>Checked for missing values after replacing the specified missing-value marker. This check does not itself remove or impute missing values.</p></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Converting &quot; ?&quot; to NA only in character columns</span></span>
@@ -4489,7 +4489,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </section>
 <section id="class-imbalance" class="level3" data-number="3.0.2">
 <h3 data-number="3.0.2" class="anchored" data-anchor-id="class-imbalance"><span class="header-section-number">3.0.2</span> Class Imbalance</h3>
-<p>We found that only <strong>15.9%</strong> of individuals in the dataset earn more than $50K. This significant imbalance required careful metric selection for evaluation.</p>
+<p>We found that only <strong>15.9%</strong> of individuals in the dataset earn more than $50K. Because the lower-income class accounts for about 84% of the training data, accuracy alone is not enough to judge model performance.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>train_data <span class="sc">|&gt;</span> </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(income) <span class="sc">|&gt;</span> </span>
@@ -4589,7 +4589,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 <p>A preprocessing pipeline was created using <code>recipes</code>:</p>
 <ul>
 <li><p>Removed the <code>fnlwgt</code> variable.</p></li>
-<li><p>One-hot encoded all categorical variables.</p></li>
+<li><p>Created dummy variables for categorical predictors.</p></li>
 <li><p>Removed zero-variance predictors.</p></li>
 <li><p>Normalized numeric predictors.(e.g., age, capital gain)</p>
 <div class="cell">
@@ -4604,7 +4604,7 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </section>
 <section id="modeling-and-model-selection" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Modeling and Model Selection</h1>
-<p>To identify the most accurate model for predicting income class, we trained and evaluated three models: <strong>Logistic Regression</strong>, <strong>Decision Tree</strong>, and <strong>Random Forest</strong>. Each model used the same preprocessed data and was assessed with 5-fold stratified cross-validation. Evaluation metrics included accuracy, precision, recall, and ROC AUC.</p>
+<p>To compare approaches for predicting income class, we trained and evaluated three models: <strong>Logistic Regression</strong>, <strong>Decision Tree</strong>, and <strong>Random Forest</strong>. Each model used the same preprocessed data and was assessed with 5-fold stratified cross-validation. Evaluation metrics included accuracy, precision, recall, and ROC AUC.</p>
 <section id="logistic-regression" class="level3" data-number="5.0.1">
 <h3 data-number="5.0.1" class="anchored" data-anchor-id="logistic-regression"><span class="header-section-number">5.0.1</span> <strong>Logistic Regression</strong></h3>
 <ul>
@@ -4702,7 +4702,7 @@ There were issues with some computations   A: x4</code></pre>
 <li><p>Recall: 0.977</p></li>
 <li><p>ROC AUC: 0.815</p></li>
 </ul>
-<p>It showed strong recall but had lower ROC AUC, indicating weaker generalization compared to Random Forest.</p>
+<p>The Decision Tree had slightly higher accuracy than Logistic Regression, but a lower cross-validation ROC AUC. The recall shown here refers to income at or below $50,000, rather than the higher-income class.</p>
 <h3 id="random-forest-tuned" data-number="5.0.3" class="anchored"><span class="header-section-number">5.0.3</span> Random Forest (Tuned)</h3></li>
 </ul>
 <div class="cell">
@@ -4741,7 +4741,7 @@ There were issues with some computations   A: x4</code></pre>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View best model</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>rf_best <span class="ot">&lt;-</span> <span class="fu">select_best</span>(rf_results, <span class="at">metric =</span> <span class="st">&quot;accuracy&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We used grid search tuning over <code>mtry</code> and <code>min_n</code> to optimize for accuracy. The best model achieved:</p>
+<p>We used grid search tuning over <code>mtry</code> and <code>min_n</code> to optimize for accuracy. The selected configuration had the following reported cross-validation results:</p>
 <ul>
 <li><p>Accuracy: <strong>0.8595</strong></p></li>
 <li><p>Precision: <strong>0.8878</strong></p></li>
@@ -4782,7 +4782,9 @@ There were issues with some computations   A: x4</code></pre>
 </tr>
 </tbody>
 </table>
-<p>Although the accuracy of the Random Forest model was nearly identical to the Decision Tree (0.8595), it demonstrated <strong>higher precision</strong> and the <strong>best ROC AUC</strong>. This suggests that Random Forest generalizes better to unseen data and is more effective at minimizing false positive errors. Given its strong balance between accuracy, robustness, and generalization, <strong>Random Forest was selected as the final model</strong> for prediction and submission.</p>
+<p>Random Forest and the Decision Tree had nearly identical reported accuracy. Random Forest had higher reported precision and ROC AUC than the Decision Tree, while Logistic Regression had lower accuracy. I selected the tuned Random Forest for the final predictions based on this comparison.</p>
+<p>These are cross-validation estimates, not scores from the unlabeled test set. Precision and recall use the first income factor level, <code>0</code> (income at or below $50,000), as the event in this workflow. They should not be interpreted as precision or recall for individuals earning more than $50,000. These results do not establish performance on new labeled data.</p>
+<p>The table records results from the original run and should be checked against fresh model output if the analysis is rerun.</p>
 </section>
 </section>
 <section id="final-model-and-predictions" class="level1" data-number="6">
@@ -4816,14 +4818,14 @@ There were issues with some computations   A: x4</code></pre>
 <section id="conclusion" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Conclusion</h1>
 <p>This machine learning project implemented a full pipeline — from data cleaning and EDA to model training and evaluation — to predict whether an individual earns more than $50,000 annually using U.S. Census data.</p>
-<p>After evaluating multiple models,<strong>Random Forest emerged as the most balanced and accurate choice</strong>. It achieved strong performance in all key metrics and was selected as the final model for prediction and submission.</p>
+<p>I compared Logistic Regression, Decision Tree, and Random Forest using five-fold stratified cross-validation. Random Forest had accuracy similar to the Decision Tree and a higher reported ROC AUC, so I selected it to generate the final submission. Because the test set has no income labels, I could not measure test-set accuracy.</p>
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
 <ul>
 <li>Built a full ML pipeline using tidymodels</li>
 <li>Cleaned and preprocessed demographic data</li>
 <li>Evaluated 3 models with cross-validation</li>
-<li>Chose a tuned Random Forest based on accuracy and AUC</li>
+<li>Selected a tuned Random Forest after comparing cross-validation results</li>
 <li>Exported predictions for submission</li>
 </ul>
 </section>
