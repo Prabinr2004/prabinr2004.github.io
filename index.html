@@ -1,694 +1,1892 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Personal Portfolio Website </title>
-    <meta name="description" content="Prabin Roka — CS & Digital Marketing student at the College of Idaho. Passionate about Machine Learning, NLP, and building a Nepali language model.">
-    <meta name="keywords" content="Prabin Roka, Computer Science, Digital Marketing, Machine Learning, NLP, Nepali, College of Idaho, Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prabin Roka | CS, Data & Digital Marketing</title>
+
+    <meta name="description" content="Prabin Roka — Computer Science, Mathematics, and Digital Marketing student at The College of Idaho. Exploring machine learning, AI, data science, digital strategy, and NLP for Nepali.">
+    <meta name="keywords" content="Prabin Roka, Computer Science, Digital Marketing, Machine Learning, Data Science, NLP, Nepali, College of Idaho, Portfolio">
     <meta name="author" content="Prabin Roka">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <script src="https://kit.fontawesome.com/0850574f00.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
- 
-<!-- Particle network canvas — fixed full-page background -->
+
+<!-- Particle network canvas -->
 <canvas id="particleCanvas"></canvas>
- 
+
+
+<!-- ==================== HEADER ==================== -->
+
 <div id="header">
-    <!-- Red announcement banner -->
+
     <div id="announcement-banner">
         <p>🎓 From Nepal to Idaho — exploring AI, machine learning, and how technology can better serve underrepresented languages.</p>
     </div>
- 
-    <!-- Header content -->
+
     <div class="header-content">
-        <!-- Navigation bar -->
+
         <nav class="header-nav">
             <div class="logo-text">PR</div>
+
             <ul id="sidemenu">
-                <li><a href='#header'>Home</a></li>
-                <li><a href='#about'>About</a></li>
-                <li><a href='#portfolio'>Portfolio</a></li>
-                <li><a href='#exploring'>Exploring</a></li>
-                <li><a href='#Services'>Skills</a></li>
-                <li><a href='#certifications'>Certifications</a></li>
-                <li><a href='#contact'>Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#exploring">Exploring</a></li>
+                <li><a href="#Services">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
- 
-        <!-- Main hero content container -->
+
+
+        <!-- HERO -->
+
         <div class="hero-main">
-            <!-- Left side: Hero text -->
+
             <div class="hero-left">
-                <p class="hero-subtitle">CS & Math / DIGITAL MARKETING STUDENT</p>
+
+                <p class="hero-subtitle">
+                    CS & Math / DIGITAL MARKETING STUDENT
+                </p>
+
                 <h1 class="hero-heading">
-                    Hi, I'm <span class="text-blue">Prabin</span> <span class="text-blue">Roka</span><br>From <span class="text-nepal">Nepal</span>.
+                    Hi, I'm
+                    <span class="text-blue">Prabin</span>
+                    <span class="text-blue">Roka</span><br>
+                    From <span class="text-nepal">Nepal</span>.
                 </h1>
- 
-                <!-- Typewriter effect -->
+
                 <p class="typewriter-line">
                     <span id="typewriter"></span><span class="cursor">|</span>
                 </p>
- 
-                <!-- Tagline -->
-                <p class="hero-tagline">Building with AI, with a long-term goal of making it understand my language too.</p>
- 
-                <!-- Status badge -->
+
+                <p class="hero-tagline">
+                    Building with AI, with a long-term goal of making it understand my language too.
+                </p>
+
                 <div class="status-badge">
                     <div class="pulse-dot"></div>
-                    <span>Open to Fall 2026 internships</span>
+                    <span>Open to 2027 opportunities</span>
                 </div>
- 
-                <!-- CTA buttons -->
+
+
                 <div class="cta-buttons">
-                    <a href="#portfolio" class="btn btn-primary">View my work</a>
+
+                    <a href="#portfolio" class="btn btn-primary">
+                        View my work
+                    </a>
+
                     <div class="cv-dropdown">
-                         <button class="btn btn-secondary">Download CV ▾</button>
+
+                        <button class="btn btn-secondary">
+                            Download CV ▾
+                        </button>
+
                         <div class="cv-dropdown-menu">
-                             <a href="certificates/Prabin_Roka_CS_Resume.pdf" download>CS & Data Science</a>
-                             <a href="certificates/Prabin_Roka_Marketing_Resume.pdf" download>Digital Marketing</a>
-                       </div>
+
+                            <a href="certificates/Prabin_Roka_CS_Resume.pdf" download>
+                                CS & Data Science
+                            </a>
+
+                            <a href="certificates/Prabin_Roka_Marketing_Resume.pdf" download>
+                                Digital Marketing
+                            </a>
+
+                        </div>
                     </div>
                 </div>
             </div>
- 
-            <!-- Right side: Floating code card (hidden on mobile) -->
+
+
+            <!-- CODE CARD -->
+
             <div class="code-card">
-                <div class="code-header">prabin_roka.py</div>
-                <pre><code><span class="code-keyword">class</span> <span class="code-class">PrabinRoka</span>:
+
+                <div class="code-header">
+                    prabin_roka.py
+                </div>
+
+<pre><code><span class="code-keyword">class</span> <span class="code-class">PrabinRoka</span>:
     name = <span class="code-string">"Prabin Roka"</span>
     gpa = <span class="code-number">3.806</span>
-    stack = [<span class="code-string">"Python"</span>, <span class="code-string">"ML"</span>,
-        <span class="code-string">"FastAPI"</span>, <span class="code-string">"R"</span>]
-    
+
+    stack = [
+        <span class="code-string">"Python"</span>,
+        <span class="code-string">"ML"</span>,
+        <span class="code-string">"FastAPI"</span>,
+        <span class="code-string">"R"</span>
+    ]
+
     interests = [
         <span class="code-string">"Data Science"</span>,
         <span class="code-string">"Digital Marketing"</span>
     ]
-    
+
     <span class="code-keyword">def</span> <span class="code-method">hire_me</span>(<span class="code-self">self</span>):
-        <span class="code-keyword">return</span> <span class="code-string">"Let's build!"</span></code></pre>
+        <span class="code-keyword">return</span> <span class="code-string">"Let's build!"</span>
+</code></pre>
+
             </div>
         </div>
- 
-        <!-- Stats bar at bottom -->
+
+
+        <!-- STATS -->
+
         <div class="stats-bar">
+
             <div class="stat">
                 <span class="stat-number">3.806</span>
                 <span class="stat-label">GPA</span>
             </div>
+
             <div class="stat">
                 <span class="stat-number">3×</span>
                 <span class="stat-label">Dean's List</span>
             </div>
+
             <div class="stat">
                 <span class="stat-number">2</span>
                 <span class="stat-label">Majors</span>
             </div>
+
             <div class="stat">
                 <span class="stat-number">6</span>
                 <span class="stat-label">Projects</span>
             </div>
+
         </div>
     </div>
 </div>
- 
+
+
+
+<!-- ==================== ABOUT ==================== -->
+
 <div id="about">
+
     <div class="container">
+
         <div class="row">
+
             <div class="about-col-1">
-                <img src ="SF.jpeg">
+                <img src="SF.jpeg" alt="Prabin Roka">
             </div>
+
+
             <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Hello! I'm Prabin Roka — a student, builder, and curious mind from Nepal, a country known for its breathtaking landscapes and rich cultural heritage.</p>
- 
+
+                <h1 class="sub-title">
+                    About Me
+                </h1>
+
+                <p>
+                    I'm Prabin Roka, a senior at The College of Idaho from Nepal,
+                    pursuing Computer Science & Mathematics and Digital Marketing
+                    with a minor in Arts. I enjoy working where technology, data,
+                    creativity, and people come together.
+                </p>
+
                 <br>
-                
-                <p>I'm currently at the College of Idaho, pursuing a double major in Computer Science & Mathematics and Digital Marketing, with a minor in Arts. It's an unconventional combination, but it reflects exactly how I think — I'm drawn to problems that sit at the intersection of technology, creativity, and human experience. My academic focus leans toward Machine Learning and Natural Language Processing, and I've maintained a 3.806 GPA with Dean's List recognition three years running.</p>
-                
+
+                <p>
+                    My academic interests are machine learning, data science, and
+                    natural language processing. Through coursework and projects,
+                    I've built AI-powered web applications, worked with real-world
+                    datasets, and developed predictive models using Python and R.
+                </p>
+
                 <br>
-                
-                <p>One of my deepest long-term goals is to build a language model for Nepali. Most of the world's AI is built around a handful of dominant languages, and I believe that's a gap worth closing. As someone who grew up speaking Nepali, Hindi, and English, linguistic diversity in AI isn't just an academic interest for me — it's personal.</p>
-                
-                <br>
-                
-                <p>Beyond coursework, I've worked on statistical research projects analyzing real-world data, explored data visualization and analytics, and continuously look for opportunities to apply what I learn to problems that actually matter. I'm currently seeking research and graduate opportunities that push me further into applied ML and data science.</p>
-                
-                <br>
-                
-                <p>I'm a quick learner, a collaborative teammate, and someone who genuinely enjoys the process of figuring things out — whether that's debugging code, analyzing a dataset, or building something from scratch.</p>
-                
-                <br>
-                
-                <p>Let's connect and build something meaningful together.</p>
-                
-                    <div class="tab-titles">
-                      <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                      <p class="tab-links" onclick="opentab('experience')">Experience</p> 
-                      <p class="tab-links" onclick="opentab('education')">Education</p>
-                      <p class="tab-links" onclick="opentab('projects')">Projects</p>                         
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Programming Languages</span><br>Python (Proficient), R (Proficient), SQL (Intermediate), HTML/CSS (Intermediate), C++ (Basic)</li>
-                            <li><span>Data Analysis & Machine Learning</span><br>Linear & Multiple Regression, K-Nearest Neighbors, Logistic Regression, Cross-Validation, Model Comparison, Hypothesis Testing, Random Forest, Gradient Boosted Trees, AIC Feature Selection, Feature Engineering, EDA</li>
-                            <li><span>Libraries & Frameworks</span><br>tidyverse, tidymodels, ggplot2, FastAPI, LLM APIs (OpenRouter, Anthropic, OpenAI)</li>
-                            <li><span>Digital Marketing</span><br>SEO, Keyword Research, Google Search & Display Ads, Consumer Behavior Analysis, Marketing Communications, Google Analytics, HubSpot, Canva, Ubersuggest, Long Tail Pro, A/B Testing, KPI & ROI Analysis, Landing Page Optimization</li>
-                            <li><span>Tools & Platforms</span><br>Git (Proficient), Tableau (Proficient), Microsoft Office Suite (Proficient), SQLite, POS Systems</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Campus Safety Office Assistant — The College of Idaho, Caldwell, ID</span><br>Mar 2024 – Present<br><br>Serve as first point of contact for campus safety calls handling emergencies, security concerns, and general inquiries. Support officers during routine patrols and monitor building access; developed strong situational judgment in a fast-paced on-call setting.</li>
-                            <li><span>Data Entry Operator — Nepal Red Cross Society, Kathmandu</span><br>August 2022 – September 2022<br><br>Managed and entered donor health records for blood bank operations, maintaining accuracy across a high-volume dataset. Contributed to a nationwide blood donation campaign through meticulous data handling and quality checks.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>The College of Idaho, Caldwell, ID — Aug 2023 – May 2027 (Expected)</span><br>B.A. in Computer Science & Mathematics, and Digital Marketing | Minor in Arts | GPA: 3.806 | Dean's List: 3 consecutive years</li>
-                            <li><span>Nepal Police School, Kavre, Kathmandu — 2020 – 2022</span><br>School Leaving Certificate (SLC) | GPA: 3.67</li>
-                            <li><span>RamShah MA VI, Tanahun, Nepal — 2018 – 2020</span><br>Secondary Education Examination (SEE) | GPA: 3.90</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="projects">
-                        <ul>
-                            <li><span>AI Fan Engagement Agent</span><br>Python, FastAPI, SQLite, OpenRouter API, HTML/CSS/JS<br><br>I wanted to see whether I could build an AI system that did more than just chat. I built a full-stack sports platform where an AI agent routes users between conversation, quizzes, predictions, rewards, and persistent memory. The backend uses FastAPI and SQLite to store user profiles and history across sessions, while the reward system tracks points, badges, and live leaderboard rankings.</li>
-                            <li><span>MAT 212 Statistical Research</span><br>R, ggplot2, tidymodels<br><br>Analyzed a real-world dataset to explore how education level and age predict financial wellbeing outcomes. Ran exploratory data analysis, built multiple regression models, and validated findings through a literature review. Presented results as a formal poster and authored a supplementary written report.</li>
-                        </ul>
-                    </div>   
+
+                <p>
+                    A long-term goal of mine is to explore language technology for
+                    Nepali. Growing up speaking Nepali, Hindi, and English made me
+                    curious about how AI can better serve languages with fewer
+                    digital resources. For now, I'm continuing to build the
+                    technical foundation to work toward that goal.
+                </p>
+
+
+                <!-- ABOUT TABS -->
+
+                <div class="tab-titles">
+
+                    <p class="tab-links active-link"
+                       onclick="opentab('skills')">
+                        Skills
+                    </p>
+
+                    <p class="tab-links"
+                       onclick="opentab('experience')">
+                        Experience
+                    </p>
+
+                    <p class="tab-links"
+                       onclick="opentab('education')">
+                        Education
+                    </p>
+
+                </div>
+
+
+                <!-- SKILLS -->
+
+                <div class="tab-contents active-tab" id="skills">
+
+                    <ul>
+
+                        <li>
+                            <span>Programming Languages</span><br>
+                            Python, R, SQL, HTML/CSS |
+                            Basic familiarity: JavaScript, C++
+                        </li>
+
+                        <li>
+                            <span>Data Analysis & Machine Learning</span><br>
+                            Linear & Multiple Regression,
+                            K-Nearest Neighbors,
+                            Logistic Regression,
+                            Cross-Validation,
+                            Model Comparison,
+                            Hypothesis Testing,
+                            Random Forest,
+                            Gradient Boosted Trees,
+                            AIC Feature Selection,
+                            Feature Engineering,
+                            Exploratory Data Analysis
+                        </li>
+
+                        <li>
+                            <span>Libraries & Frameworks</span><br>
+                            FastAPI, Flask, SQLite, tidyverse, tidymodels,
+                            ggplot2, Quarto, OpenRouter API
+                        </li>
+
+                        <li>
+                            <span>Digital Marketing</span><br>
+                            SEO, Keyword Research, Google Search & Display Ads,
+                            Consumer Behavior, Google Analytics, HubSpot, Canva,
+                            Ubersuggest, Long Tail Pro, A/B Testing,
+                            KPI & ROI Analysis, Landing Page Optimization
+                        </li>
+
+                        <li>
+                            <span>Tools & Platforms</span><br>
+                            Git, Tableau, Microsoft Office Suite
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- EXPERIENCE -->
+
+                <div class="tab-contents" id="experience">
+
+                    <ul>
+
+                        <li>
+                            <span>
+                                Café Supervisor — Bon Appétit,
+                                The College of Idaho
+                            </span>
+                            <br>
+                            Fall 2023 – Present
+                            <br><br>
+                            Assign staff responsibilities, help coordinate daily
+                            service, train new employees, and support opening and
+                            closing operations while maintaining an organized
+                            workspace.
+                        </li>
+
+                        <li>
+                            <span>
+                                Campus Safety Office Assistant —
+                                The College of Idaho, Caldwell, ID
+                            </span>
+                            <br>
+                            Mar 2024 – Present
+                            <br><br>
+                            Serve as a first point of contact for campus safety
+                            calls involving security concerns and general inquiries.
+                            Support officers during routine operations and help
+                            monitor building access.
+                        </li>
+
+                        <li>
+                            <span>
+                                Data Entry Operator —
+                                Nepal Red Cross Society, Kathmandu
+                            </span>
+                            <br>
+                            August 2022 – September 2022
+                            <br><br>
+                            Entered donor health records for blood bank operations
+                            and checked information for accuracy during a nationwide
+                            blood donation campaign.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- EDUCATION -->
+
+                <div class="tab-contents" id="education">
+
+                    <ul>
+
+                        <li>
+                            <span>
+                                The College of Idaho, Caldwell, ID —
+                                Aug 2023 – May 2027 (Expected)
+                            </span>
+                            <br>
+                            B.A. in Computer Science & Mathematics and
+                            Digital Marketing | Minor in Arts |
+                            GPA: 3.806 |
+                            Dean's List: 3 consecutive years
+                        </li>
+
+                        <li>
+                            <span>
+                                Nepal Police School, Kavre, Kathmandu —
+                                2020 – 2022
+                            </span>
+                            <br>
+                            School Leaving Certificate (SLC) | GPA: 3.67
+                        </li>
+
+                        <li>
+                            <span>
+                                RamShah MA VI, Tanahun, Nepal —
+                                2018 – 2020
+                            </span>
+                            <br>
+                            Secondary Education Examination (SEE) | GPA: 3.90
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
         </div>
     </div>
 </div>
- 
+
+
+
+<!-- ==================== COURSEWORK / EXTRAS ==================== -->
+
 <div id="extras">
+
     <div class="container">
+
         <div class="extras-grid">
+
             <div class="extras-box">
-    <h3>Relevant Coursework</h3>
-    <div class="course-tabs">
-        <span class="course-tab active-course-tab" onclick="opencoursetab(event,'cs')">CS & Software</span>
-        <span class="course-tab" onclick="opencoursetab(event,'data')">Data & Math</span>
-        <span class="course-tab" onclick="opencoursetab(event,'marketing')">Marketing & Business</span>
-        <span class="course-tab" onclick="opencoursetab(event,'arts')">Arts & Design</span>
-    </div>
-    <div class="course-content active-course" id="cs">
-        <ul>
-            <li>Computer Science I & II</li>
-            <li>Software Engineering & Senior Design</li>
-            <li>Design and Analysis of Algorithms</li>
-            <li>Introduction to Computer Architecture</li>
-            <li>Formal Languages and Automata</li>
-        </ul>
-    </div>
-    <div class="course-content" id="data">
-        <ul>
-            <li>Statistical Machine Learning</li>
-            <li>Multiple Regression Analysis (MAT 212)</li>
-            <li>Data Analytics</li>
-            <li>Linear Algebra</li>
-            <li>Introduction to Proofs / Discrete Mathematics</li>
-            <li>Applied & Single Variable Calculus</li>
-        </ul>
-    </div>
-    <div class="course-content" id="marketing">
-        <ul>
-            <li>Digital Marketing Essentials</li>
-            <li>Social Media Marketing</li>
-            <li>Consumer Behavior</li>
-            <li>Principles of Marketing</li>
-            <li>Financial Accounting</li>
-            <li>Principles of Economics</li>
-        </ul>
-    </div>
-    <div class="course-content" id="arts">
-        <ul>
-            <li>Introduction to Digital Art</li>
-            <li>Ways of Seeing</li>
-            <li>Ancient to Medieval Art</li>
-        </ul>
-    </div>
-</div>
+
+                <h3>Relevant Coursework</h3>
+
+                <div class="course-tabs">
+
+                    <span class="course-tab active-course-tab"
+                          onclick="opencoursetab(event,'cs')">
+                        CS & Software
+                    </span>
+
+                    <span class="course-tab"
+                          onclick="opencoursetab(event,'data')">
+                        Data & Math
+                    </span>
+
+                    <span class="course-tab"
+                          onclick="opencoursetab(event,'marketing')">
+                        Marketing & Business
+                    </span>
+
+                    <span class="course-tab"
+                          onclick="opencoursetab(event,'arts')">
+                        Arts & Design
+                    </span>
+
+                </div>
+
+
+                <div class="course-content active-course" id="cs">
+
+                    <ul>
+                        <li>Computer Science I & II</li>
+                        <li>Software Engineering & Senior Design</li>
+                        <li>Design and Analysis of Algorithms</li>
+                        <li>Introduction to Computer Architecture</li>
+                        <li>Formal Languages and Automata</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="course-content" id="data">
+
+                    <ul>
+                        <li>Statistical Machine Learning</li>
+                        <li>Multiple Regression Analysis</li>
+                        <li>Data Analytics</li>
+                        <li>Linear Algebra</li>
+                        <li>Introduction to Proofs / Discrete Mathematics</li>
+                        <li>Applied & Single Variable Calculus</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="course-content" id="marketing">
+
+                    <ul>
+                        <li>Digital Marketing Essentials</li>
+                        <li>Social Media Marketing</li>
+                        <li>Consumer Behavior</li>
+                        <li>Principles of Marketing</li>
+                        <li>Financial Accounting</li>
+                        <li>Principles of Economics</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="course-content" id="arts">
+
+                    <ul>
+                        <li>Introduction to Digital Art</li>
+                        <li>Ways of Seeing</li>
+                        <li>Ancient to Medieval Art</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
             <div class="extras-box">
+
                 <h3>Languages</h3>
+
                 <ul>
                     <li><span>English</span> — Fluent</li>
                     <li><span>Nepali</span> — Fluent</li>
                     <li><span>Hindi</span> — Fluent</li>
                 </ul>
-                <h3 style="margin-top:30px;">Awards & Honors</h3>
+
+
+                <h3 style="margin-top:30px;">
+                    Awards & Honors
+                </h3>
+
                 <ul>
-                    <li><span>Dean's List</span> — 3 Consecutive Years</li>
-                    <li><span>Interschool Robotics Event</span> — Winner 2021</li>
+
+                    <li>
+                        <span>Dean's List</span> —
+                        3 Consecutive Years
+                    </li>
+
+                    <li>
+                        <span>Interschool Robotics Event</span> —
+                        Winner 2021
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
     </div>
 </div>
- 
+
+
+
+<!-- ==================== WHAT I DO ==================== -->
+
 <div id="Services">
+
     <div class="container">
-        <h1 class="sub-title">What I Do</h1>
+
+        <h1 class="sub-title">
+            What I Do
+        </h1>
+
+
         <div class="services-list">
+
             <div>
+
                 <i class="fa-solid fa-chart-line"></i>
-                <h2>Machine Learning & Data</h2>
-                <p>Build and evaluate predictive models using Python and R, with experience in regression, classification, Random Forest, feature engineering, model comparison, and reproducible analysis on real-world datasets.</p>
-                <a href="#portfolio">See related work</a>
+
+                <h2>
+                    Machine Learning & Data
+                </h2>
+
+                <p>
+                    Build and evaluate predictive models using Python and R,
+                    with experience in regression, classification, Random Forest,
+                    feature engineering, model comparison, and reproducible
+                    analysis on real-world datasets.
+                </p>
+
+                <a href="#portfolio">
+                    See related work
+                </a>
+
             </div>
+
+
             <div>
+
                 <i class="fa-solid fa-globe"></i>
-                <h2>AI Applications</h2>
-                <p>Build full-stack AI-powered applications using FastAPI, SQLite, JavaScript, and LLM APIs, including agent workflows, persistent user memory, tool routing, and interactive web interfaces.</p>
-                <a href="#portfolio">See related work</a>
+
+                <h2>
+                    AI Applications
+                </h2>
+
+                <p>
+                    Build AI-powered applications using FastAPI, Flask, SQLite,
+                    JavaScript, and LLM APIs, including agent workflows,
+                    persistent user data, tool routing, and interactive web
+                    interfaces.
+                </p>
+
+                <a href="#portfolio">
+                    See related work
+                </a>
+
             </div>
+
+
             <div>
+
                 <i class="fa-solid fa-bullhorn"></i>
-                <h2>Digital Strategy</h2>
-                <p>Apply SEO, keyword research, Google Ads, A/B testing, landing-page optimization, consumer behavior, and KPI/ROI analysis to connect technical work with how people actually discover and use products.</p>
-                <a href="#certifications">View certifications</a>
+
+                <h2>
+                    Digital Strategy
+                </h2>
+
+                <p>
+                    Apply SEO, keyword research, Google Search & Display Ads,
+                    A/B testing, landing-page optimization, consumer behavior,
+                    Google Analytics, and KPI/ROI analysis to understand
+                    audiences, improve campaigns, and connect digital strategy
+                    with measurable results.
+                </p>
+
+                <a href="#certifications">
+                    View certifications
+                </a>
+
             </div>
+
+
             <div>
+
                 <i class="fa-solid fa-code"></i>
-                <h2>Software & Web Development</h2>
-                <p>Work across Python, R, SQL, JavaScript, HTML/CSS, and FastAPI, supported by coursework in algorithms, automata, computer architecture, discrete mathematics, and linear algebra.</p>
-                <a href="#portfolio">See related work</a>
+
+                <h2>
+                    Software & Web Development
+                </h2>
+
+                <p>
+                    Work across Python, R, SQL, JavaScript, HTML/CSS, FastAPI,
+                    and Flask, supported by coursework in algorithms, automata,
+                    computer architecture, discrete mathematics, and linear
+                    algebra.
+                </p>
+
+                <a href="#portfolio">
+                    See related work
+                </a>
+
             </div>
+
         </div>
+
     </div>
 </div>
- 
+
+
+
+<!-- ==================== PORTFOLIO ==================== -->
+
 <div id="portfolio">
+
     <div class="container">
-        <h1 class="sub-title">My Work</h1>
+
+        <h1 class="sub-title">
+            My Work
+        </h1>
+
+
         <div class="work-list">
+
+
+            <!-- AI FAN ENGAGEMENT -->
+
             <div class="work">
+
                 <div class="work-info">
-                    <h3>AI Fan Engagement Agent</h3>
-                    <p>I wanted to see whether I could build an AI system that did more than just chat. I built a full-stack sports platform where an AI agent routes users between quizzes, predictions, conversation, rewards, and persistent memory.</p>
-                    <p style="margin-top:12px;">Built with Python, FastAPI, SQLite, and OpenRouter API.</p>
+
+                    <h3>
+                        AI Fan Engagement Agent
+                    </h3>
+
+                    <p>
+                        Built a full-stack sports platform where an AI agent
+                        routes users between quizzes, predictions, conversation,
+                        rewards, and persistent user profiles.
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        Built with Python, FastAPI, SQLite, and OpenRouter API.
+                    </p>
+
                     <div class="work-tags">
+
                         <span>Python</span>
                         <span>FastAPI</span>
                         <span>SQLite</span>
                         <span>LLM</span>
+
                     </div>
-                    <a href="https://github.com/Prabinr2004/CSCI_Final_proJect" target="_blank" rel="noopener noreferrer" class="btn btn2" style="margin:20px 0 0;">View on GitHub</a>
+
+                    <a href="https://github.com/Prabinr2004/CSCI_Final_proJect"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn2"
+                       style="margin:20px 0 0;">
+
+                        View on GitHub
+
+                    </a>
+
                 </div>
             </div>
 
+
+
+            <!-- REACT AGENT -->
+
             <div class="work">
+
                 <div class="work-info">
-                    <h3>MAT 212 Statistical Research</h3>
-                    <div class="tab-titles" style="margin: 15px 0 25px;">
-                        <p class="tab-links active-link" onclick="opentab2('tips')">EDA of Restaurant Tipping Behavior</p>
-                        <p class="tab-links" onclick="opentab2('finwellbeing')">Financial Wellbeing</p>
+
+                    <h3>
+                        ReAct AI Agent
+                    </h3>
+
+                    <p>
+                        Built an AI agent with CLI and web interfaces that
+                        reasons through tasks, selects tools, processes results,
+                        and repeats the reasoning-and-action cycle until it
+                        produces an answer.
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        Integrated tools for weather, earthquakes, academic
+                        paper searches, and calculations using Python, Flask,
+                        OpenRouter API, and HTTP requests.
+                    </p>
+
+                    <div class="work-tags">
+
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>OpenRouter</span>
+                        <span>ReAct</span>
+
                     </div>
+
+                    <a href="https://react-agent-07nd.onrender.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn2"
+                       style="margin:20px 10px 0 0;">
+
+                        Live Demo
+
+                    </a>
+
+                    <a href="https://github.com/Prabinr2004/CSCI-408_Project-1"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn2"
+                       style="margin:20px 0 0;">
+
+                        View on GitHub
+
+                    </a>
+
+                </div>
+            </div>
+
+
+
+            <!-- MAT 212 -->
+
+            <div class="work">
+
+                <div class="work-info">
+
+                    <h3>
+                        MAT 212 Statistical Research
+                    </h3>
+
+                    <div class="tab-titles"
+                         style="margin:15px 0 25px;">
+
+                        <p class="tab-links active-link"
+                           onclick="opentab2('tips')">
+
+                            EDA of Restaurant Tipping Behavior
+
+                        </p>
+
+                        <p class="tab-links"
+                           onclick="opentab2('finwellbeing')">
+
+                            Financial Wellbeing
+
+                        </p>
+
+                    </div>
+
+
                     <div class="tab-contents active-tab" id="tips">
-                        <p>Conducted comprehensive exploratory data analysis on restaurant tipping patterns, building scatter plots, bar charts, and box plots to surface behavioral trends. Produced a reproducible HTML report in Quarto with integrated code, visualizations, and business-focused narrative.</p>
-                        <div class="work-tags" style="margin-top:15px;">
+
+                        <p>
+                            Conducted exploratory data analysis on restaurant
+                            tipping patterns, building scatter plots, bar charts,
+                            and box plots to identify behavioral trends.
+                            Produced a reproducible HTML report in Quarto with
+                            integrated code, visualizations, and analysis.
+                        </p>
+
+                        <div class="work-tags"
+                             style="margin-top:15px;">
+
                             <span>R</span>
                             <span>ggplot2</span>
                             <span>tidymodels</span>
                             <span>Ridge Regression</span>
                             <span>KNN</span>
                             <span>Feature Selection</span>
+
                         </div>
-                        <a href="SampleAnalysis.html" target="_blank" rel="noopener noreferrer" class="btn btn2" style="margin:20px 0 0;">View Analysis</a>
+
+                        <a href="SampleAnalysis.html"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn2"
+                           style="margin:20px 0 0;">
+
+                            View Analysis
+
+                        </a>
+
                     </div>
-                    <div class="tab-contents" id="finwellbeing">
-                        <p>Course research project investigating how education level and age predict financial wellbeing outcomes. Collected and cleaned a real-world dataset, ran exploratory data analysis, built multiple regression models, and validated findings through a literature review. Presented results as a formal poster with a supplementary written report.</p>
-                        <div class="work-tags" style="margin-top:15px;">
+
+
+                    <div class="tab-contents"
+                         id="finwellbeing">
+
+                        <p>
+                            Investigated how education level and age predict
+                            financial wellbeing outcomes. Cleaned a real-world
+                            dataset, conducted exploratory analysis, built
+                            multiple regression models, and compared the results
+                            with existing literature.
+                        </p>
+
+                        <div class="work-tags"
+                             style="margin-top:15px;">
+
                             <span>R</span>
                             <span>ggplot2</span>
                             <span>tidymodels</span>
                             <span>Multiple Regression</span>
                             <span>EDA</span>
                             <span>Literature Review</span>
+
                         </div>
+
                     </div>
+
                 </div>
             </div>
+
+
+
+            <!-- CENSUS -->
+
             <div class="work">
+
                 <div class="work-info">
-                    <h3>Predictive Modeling Hackathon — U.S. Census Income Classification</h3>
-                    <p>Built an end-to-end ML pipeline to predict income brackets from U.S. Census demographic data. Trained and tuned Random Forest models, addressed class imbalance to improve recall, and documented the full workflow in a reproducible Quarto report.</p>
-                    <div class="work-tags" style="margin-top:15px; margin-bottom:12px;">
+
+                    <h3>
+                        Predictive Modeling Hackathon —
+                        U.S. Census Income Classification
+                    </h3>
+
+                    <p>
+                        Built an end-to-end machine learning pipeline to predict
+                        income brackets from U.S. Census demographic data.
+                        Compared classification approaches, tuned a Random
+                        Forest model, and documented the workflow in a
+                        reproducible Quarto report.
+                    </p>
+
+                    <div class="work-tags"
+                         style="margin-top:15px; margin-bottom:12px;">
+
                         <span>R</span>
                         <span>tidymodels</span>
                         <span>Random Forest</span>
                         <span>Quarto</span>
+
                     </div>
-                    <p style="margin-top: 12px; font-size: 0.9em; color: #888;"><strong>Course:</strong> MAT427 Statistical Machine Learning</p>
-                    <a href="Predictive Modeling Hackathon — U.S. Census Income Classification.html" target="_blank" rel="noopener noreferrer" class="btn btn2" style="margin:20px 0 0;">View Analysis</a>
+
+                    <p style="margin-top:12px; font-size:0.9em; color:#888;">
+                        <strong>Course:</strong>
+                        MAT427 Statistical Machine Learning
+                    </p>
+
+                    <a href="Predictive Modeling Hackathon — U.S. Census Income Classification.html"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn2"
+                       style="margin:20px 0 0;">
+
+                        View Analysis
+
+                    </a>
+
                 </div>
             </div>
+
+
+
+            <!-- COLLEGE ADMISSIONS -->
+
             <div class="work">
+
                 <div class="work-info">
-                    <h3>College Admissions Predictive Modeling</h3>
-                    <p>Analyzed 3 years of anonymized College of Idaho admissions data to predict enrollment likelihood and identify key influencing factors. Focused on model interpretability — explaining the why behind predictions — using merged multi-year datasets with sparse categorical variables.</p>
-                    <div class="work-tags" style="margin-top:15px; margin-bottom:12px;">
+
+                    <h3>
+                        College Admissions Predictive Modeling
+                    </h3>
+
+                    <p>
+                        Analyzed three years of anonymized College of Idaho
+                        admissions data to predict enrollment likelihood and
+                        identify important influencing factors. Combined
+                        multi-year datasets, grouped sparse categories, and
+                        focused on interpretable logistic regression results.
+                    </p>
+
+                    <div class="work-tags"
+                         style="margin-top:15px; margin-bottom:12px;">
+
                         <span>R</span>
                         <span>tidymodels</span>
                         <span>Logistic Regression</span>
                         <span>Quarto</span>
+
                     </div>
-                    <p style="margin-top: 12px; font-size: 0.9em; color: #888;"><strong>Course:</strong> MAT427 Statistical Machine Learning</p>
-                    <a href="College Admissions Predictive Modeling.html" target="_blank" rel="noopener noreferrer" class="btn btn2" style="margin:20px 0 0;">View Analysis</a>
+
+                    <p style="margin-top:12px; font-size:0.9em; color:#888;">
+                        <strong>Course:</strong>
+                        MAT427 Statistical Machine Learning
+                    </p>
+
+                    <a href="College Admissions Predictive Modeling.html"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn2"
+                       style="margin:20px 0 0;">
+
+                        View Analysis
+
+                    </a>
+
                 </div>
             </div>
+
         </div>
     </div>
 </div>
- 
+
+
+
+<!-- ==================== CURRENTLY EXPLORING ==================== -->
 
 <div id="exploring">
+
     <div class="container">
-        <h1 class="sub-title">Currently Exploring</h1>
-        <p style="color:#ababab; max-width:760px; line-height:1.8; margin-top:8px;">A long-term goal I’m building toward as I develop stronger foundations in machine learning, NLP, and software development.</p>
+
+        <h1 class="sub-title">
+            Currently Exploring
+        </h1>
+
+        <p style="color:#ababab;
+                  max-width:760px;
+                  line-height:1.8;
+                  margin-top:8px;">
+
+            A long-term goal I'm building toward as I develop stronger
+            foundations in machine learning, NLP, and software development.
+
+        </p>
+
+
         <div class="work-list">
+
             <div class="work">
+
                 <div class="work-info">
-                    <h3>Nepali Language AI <span style="font-size:13px; font-weight:500; color:#60a5fa;">— Long-Term Goal</span></h3>
-                    <p>I grew up switching naturally between Nepali, Hindi, and English, and that experience shapes how I think about language technology. My long-term goal is to explore NLP for Nepali and eventually help build tools that understand the language the way people actually use it — not only through literal translation.</p>
-                    <p style="margin-top:12px;">For now, I'm building the foundations through machine learning, NLP, software development, and data-focused projects while learning more about low-resource language modeling.</p>
-                    <div class="work-tags" style="margin-top:15px;">
+
+                    <h3>
+                        Nepali Language AI
+                        <span style="font-size:13px;
+                                     font-weight:500;
+                                     color:#60a5fa;">
+                            — Long-Term Goal
+                        </span>
+                    </h3>
+
+                    <p>
+                        I grew up switching naturally between Nepali, Hindi,
+                        and English, and that experience shapes how I think
+                        about language technology. My long-term goal is to
+                        explore NLP for Nepali and eventually help build tools
+                        that understand the language the way people actually
+                        use it — not only through literal translation.
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        For now, I'm building the foundations through machine
+                        learning, NLP, software development, and data-focused
+                        projects while learning more about low-resource
+                        language modeling.
+                    </p>
+
+                    <div class="work-tags"
+                         style="margin-top:15px;">
+
                         <span>NLP</span>
                         <span>Nepali</span>
                         <span>Machine Learning</span>
                         <span>Low-Resource Languages</span>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 </div>
 
+
+
+<!-- ==================== CERTIFICATIONS ==================== -->
+
 <div id="certifications">
+
     <div class="container">
-        <h1 class="sub-title">Certifications</h1>
+
+        <h1 class="sub-title">
+            Certifications
+        </h1>
+
+
         <div class="certifications-grid">
-            <div class="cert-card" onclick="openCertModal('certificates/Google Display Ads Certification.png')">
-                <h3>Google Ads Display Certification</h3>
-                <p><strong>Google</strong></p>
-                <p class="cert-date">Apr 2026 – Apr 2027</p>
-                <p class="cert-link">Click to view certificate</p>
+
+
+            <div class="cert-card"
+                 onclick="openCertModal('certificates/Google Display Ads Certification.png')">
+
+                <h3>
+                    Google Ads Display Certification
+                </h3>
+
+                <p>
+                    <strong>Google</strong>
+                </p>
+
+                <p class="cert-date">
+                    Apr 2026 – Apr 2027
+                </p>
+
+                <p class="cert-link">
+                    Click to view certificate
+                </p>
+
             </div>
-            <div class="cert-card" onclick="openCertModal('certificates/Social Media Certified-Hubspot.png')">
-                <h3>HubSpot Social Media Certification</h3>
-                <p><strong>HubSpot Academy</strong></p>
-                <p class="cert-date">Sep 2025 – Oct 2027</p>
-                <p class="cert-link">Click to view certificate</p>
+
+
+            <div class="cert-card"
+                 onclick="openCertModal('certificates/Social Media Certified-Hubspot.png')">
+
+                <h3>
+                    HubSpot Social Media Certification
+                </h3>
+
+                <p>
+                    <strong>HubSpot Academy</strong>
+                </p>
+
+                <p class="cert-date">
+                    Sep 2025 – Oct 2027
+                </p>
+
+                <p class="cert-link">
+                    Click to view certificate
+                </p>
+
             </div>
-            <div class="cert-card" onclick="openCertModal('certificates/Digital Marketing Certification.pdf')">
-                <h3>Digital Marketing Certification</h3>
-                <p><strong>Stukent</strong></p>
-                <p class="cert-date">May 2026</p>
-                <p class="cert-link">Click to view certificate</p>
+
+
+            <div class="cert-card"
+                 onclick="openCertModal('certificates/Digital Marketing Certification.pdf')">
+
+                <h3>
+                    Digital Marketing Certification
+                </h3>
+
+                <p>
+                    <strong>Stukent</strong>
+                </p>
+
+                <p class="cert-date">
+                    May 2026
+                </p>
+
+                <p class="cert-link">
+                    Click to view certificate
+                </p>
+
             </div>
-            <div class="cert-card" onclick="openCertModal('certificates/Digital _Marketing_Simternship.pdf')">
-                <h3>Digital Marketing Simternship</h3>
-                <p><strong>Stukent (Buhi Supply Co.)</strong></p>
-                <p class="cert-date">Apr 2026</p>
-                <p class="cert-link">Click to view certificate</p>
+
+
+            <div class="cert-card"
+                 onclick="openCertModal('certificates/Digital _Marketing_Simternship.pdf')">
+
+                <h3>
+                    Digital Marketing Simternship
+                </h3>
+
+                <p>
+                    <strong>Stukent (Buhi Supply Co.)</strong>
+                </p>
+
+                <p class="cert-date">
+                    Apr 2026
+                </p>
+
+                <p class="cert-link">
+                    Click to view certificate
+                </p>
+
             </div>
-            <div class="cert-card" onclick="openCertModal('certificates/Social Media Simternship.pdf')">
-                <h3>Social Media Simternship</h3>
-                <p><strong>Stukent</strong></p>
-                <p class="cert-date">Dec 2025</p>
-                <p class="cert-link">Click to view certificate</p>
+
+
+            <div class="cert-card"
+                 onclick="openCertModal('certificates/Social Media Simternship.pdf')">
+
+                <h3>
+                    Social Media Simternship
+                </h3>
+
+                <p>
+                    <strong>Stukent</strong>
+                </p>
+
+                <p class="cert-date">
+                    Dec 2025
+                </p>
+
+                <p class="cert-link">
+                    Click to view certificate
+                </p>
+
             </div>
+
         </div>
     </div>
 </div>
- 
-<!-- Certification Modal -->
-<div id="certModal" class="cert-modal" onclick="if(event.target === this) closeCertModal()">
-  <div class="cert-modal-content">
-    <span class="cert-modal-close" onclick="closeCertModal()">&times;</span>
-    <div id="certModalBody"></div>
-  </div>
+
+
+
+<!-- CERTIFICATION MODAL -->
+
+<div id="certModal"
+     class="cert-modal"
+     onclick="if(event.target === this) closeCertModal()">
+
+    <div class="cert-modal-content">
+
+        <span class="cert-modal-close"
+              onclick="closeCertModal()">
+            &times;
+        </span>
+
+        <div id="certModalBody"></div>
+
+    </div>
+
 </div>
- 
+
+
+
+<!-- ==================== CONTACT ==================== -->
+
 <div id="contact">
+
     <div class="container">
+
         <div class="row">
+
             <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> prabinroka2004@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i> (208) 602-0627</p>
+
+                <h1 class="sub-title">
+                    Contact Me
+                </h1>
+
+                <p>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    prabinroka2004@gmail.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-square-phone"></i>
+                    (208) 602-0627
+                </p>
+
+
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/prabin_r.cxettrii/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/prabin-roka-0596b9307/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/Prabinr2004" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
-                    <a href="https://x.com/PrabinRoka26045" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+
+                    <a href="https://www.instagram.com/prabin_r.cxettrii/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/prabin-roka-0596b9307/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://github.com/Prabinr2004"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+
+                    <a href="https://x.com/PrabinRoka26045"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
                 </div>
+
+
                 <div class="cv-dropdown">
-                    <button class="btn btn2">View CV ▾</button>
+
+                    <button class="btn btn2">
+                        View CV ▾
+                    </button>
+
                     <div class="cv-dropdown-menu">
-                        <a href="certificates/Prabin_Roka_CS_Resume.pdf" target="_blank" rel="noopener noreferrer">CS & Data Science</a>
-                        <a href="certificates/Prabin_Roka_Marketing_Resume.pdf" target="_blank" rel="noopener noreferrer">Digital Marketing</a>
+
+                        <a href="certificates/Prabin_Roka_CS_Resume.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            CS & Data Science
+                        </a>
+
+                        <a href="certificates/Prabin_Roka_Marketing_Resume.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Digital Marketing
+                        </a>
+
                     </div>
+
                 </div>
+
             </div>
+
+
             <div class="contact-right">
+
                 <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+
+                    <input type="text"
+                           name="Name"
+                           placeholder="Your Name"
+                           required>
+
+                    <input type="email"
+                           name="Email"
+                           placeholder="Your Email"
+                           required>
+
+                    <textarea name="Message"
+                              rows="6"
+                              placeholder="Your Message"></textarea>
+
+                    <button type="submit"
+                            class="btn btn2">
+                        Submit
+                    </button>
+
                 </form>
+
                 <span id="msg"></span>
+
             </div>
+
         </div>
     </div>
 </div>
- 
+
+
+
+<!-- FOOTER -->
+
 <div class="copyright">
-    <p>Copyright © 2024-2026 Prabin Roka. <i class="fa-regular fa-star"></i> All Rights Reserved</p>
+
+    <p>
+        Copyright © 2024-2026 Prabin Roka.
+        <i class="fa-regular fa-star"></i>
+        All Rights Reserved
+    </p>
+
 </div>
- 
+
+
+
+<!-- ==================== ABOUT / PORTFOLIO TABS ==================== -->
+
 <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    
+
+    var tablinks =
+        document.getElementsByClassName("tab-links");
+
+    var tabcontents =
+        document.getElementsByClassName("tab-contents");
+
+
     function opentab(tabname){
+
         for(tablink of tablinks){
             tablink.classList.remove("active-link");
         }
+
         for(tabcontent of tabcontents){
             tabcontent.classList.remove("active-tab");
         }
+
         event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+
+        document
+            .getElementById(tabname)
+            .classList.add("active-tab");
     }
- 
-    var tablinks2 = document.querySelectorAll("#portfolio .tab-links");
-    var tabcontents2 = document.querySelectorAll("#portfolio .tab-contents");
- 
+
+
+    var tablinks2 =
+        document.querySelectorAll("#portfolio .tab-links");
+
+    var tabcontents2 =
+        document.querySelectorAll("#portfolio .tab-contents");
+
+
     function opentab2(tabname){
-        tablinks2.forEach(link => link.classList.remove("active-link"));
-        tabcontents2.forEach(content => content.classList.remove("active-tab"));
+
+        tablinks2.forEach(
+            link => link.classList.remove("active-link")
+        );
+
+        tabcontents2.forEach(
+            content => content.classList.remove("active-tab")
+        );
+
         event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+
+        document
+            .getElementById(tabname)
+            .classList.add("active-tab");
     }
-    
+
+
     function opencoursetab(event, tabname) {
-         document.querySelectorAll('.course-content').forEach(el => el.classList.remove('active-course'));
-         document.querySelectorAll('.course-tab').forEach(el => el.classList.remove('active-course-tab'));
-        document.getElementById(tabname).classList.add('active-course');
-        event.currentTarget.classList.add('active-course-tab');
-   }
+
+        document
+            .querySelectorAll(".course-content")
+            .forEach(
+                el => el.classList.remove("active-course")
+            );
+
+        document
+            .querySelectorAll(".course-tab")
+            .forEach(
+                el => el.classList.remove("active-course-tab")
+            );
+
+        document
+            .getElementById(tabname)
+            .classList.add("active-course");
+
+        event.currentTarget
+            .classList.add("active-course-tab");
+    }
+
+
+
     // ==================== CERTIFICATION MODAL ====================
+
     function openCertModal(filePath) {
-        const modal = document.getElementById('certModal');
-        const modalBody = document.getElementById('certModalBody');
-        modalBody.innerHTML = '';
- 
-        if (filePath.endsWith('.png')) {
-            modalBody.innerHTML = `<img src="${filePath}" style="width: 100%; max-height: 80vh; object-fit: contain;">`;
-        } else if (filePath.endsWith('.pdf')) {
-            modalBody.innerHTML = `<iframe src="${filePath}" style="width: 100%; height: 80vh; border: none;"></iframe>`;
+
+        const modal =
+            document.getElementById("certModal");
+
+        const modalBody =
+            document.getElementById("certModalBody");
+
+        modalBody.innerHTML = "";
+
+
+        if(filePath.endsWith(".png")){
+
+            modalBody.innerHTML =
+                `<img src="${filePath}"
+                style="width:100%;
+                max-height:80vh;
+                object-fit:contain;">`;
+
+        } else if(filePath.endsWith(".pdf")){
+
+            modalBody.innerHTML =
+                `<iframe src="${filePath}"
+                style="width:100%;
+                height:80vh;
+                border:none;"></iframe>`;
         }
- 
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+
+        modal.style.display = "flex";
+
+        document.body.style.overflow = "hidden";
     }
- 
-    function closeCertModal() {
-        const modal = document.getElementById('certModal');
-        modal.style.display = 'none';
-        document.getElementById('certModalBody').innerHTML = '';
-        document.body.style.overflow = 'auto';
+
+
+    function closeCertModal(){
+
+        const modal =
+            document.getElementById("certModal");
+
+        modal.style.display = "none";
+
+        document
+            .getElementById("certModalBody")
+            .innerHTML = "";
+
+        document.body.style.overflow = "auto";
     }
- 
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closeCertModal();
+
+
+    document.addEventListener(
+        "keydown",
+        function(event){
+
+            if(event.key === "Escape"){
+                closeCertModal();
+            }
+
         }
-    });
+    );
+
 </script>
- 
+
+
+
+<!-- ==================== MOBILE MENU ==================== -->
+
 <script>
-    var sidemenu = document.getElementById("sidemenu");
- 
+
+    var sidemenu =
+        document.getElementById("sidemenu");
+
+
     function openmenu(){
-        sidemenu.classList.add("open");    
+
+        sidemenu.classList.add("open");
+
     }
+
+
     function closemenu(){
+
         sidemenu.classList.remove("open");
-    }    
-</script>
- 
-<script>
-    // ==================== PARTICLE NETWORK ANIMATION ====================
-    const canvas = document.getElementById('particleCanvas');
-    const ctx = canvas.getContext('2d');
- 
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+
     }
+
+</script>
+
+
+
+<!-- ==================== PARTICLE NETWORK ==================== -->
+
+<script>
+
+    const canvas =
+        document.getElementById("particleCanvas");
+
+    const ctx =
+        canvas.getContext("2d");
+
+
+    function resizeCanvas(){
+
+        canvas.width =
+            window.innerWidth;
+
+        canvas.height =
+            window.innerHeight;
+    }
+
+
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
- 
-    class Particle {
-        constructor() {
+
+    window.addEventListener(
+        "resize",
+        resizeCanvas
+    );
+
+
+    class Particle{
+
+        constructor(){
             this.reset();
         }
- 
-        reset() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
-            this.radius = Math.random() * 1.5 + 0.5;
+
+
+        reset(){
+
+            this.x =
+                Math.random() * canvas.width;
+
+            this.y =
+                Math.random() * canvas.height;
+
+            this.vx =
+                (Math.random() - 0.5) * 0.5;
+
+            this.vy =
+                (Math.random() - 0.5) * 0.5;
+
+            this.radius =
+                Math.random() * 1.5 + 0.5;
         }
- 
-        update() {
+
+
+        update(){
+
             this.x += this.vx;
             this.y += this.vy;
-            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-            this.x = Math.max(0, Math.min(canvas.width, this.x));
-            this.y = Math.max(0, Math.min(canvas.height, this.y));
+
+            if(
+                this.x < 0 ||
+                this.x > canvas.width
+            ){
+                this.vx *= -1;
+            }
+
+            if(
+                this.y < 0 ||
+                this.y > canvas.height
+            ){
+                this.vy *= -1;
+            }
+
+            this.x =
+                Math.max(
+                    0,
+                    Math.min(
+                        canvas.width,
+                        this.x
+                    )
+                );
+
+            this.y =
+                Math.max(
+                    0,
+                    Math.min(
+                        canvas.height,
+                        this.y
+                    )
+                );
         }
- 
-        draw() {
-            ctx.fillStyle = 'rgba(96, 165, 250, 0.5)';
+
+
+        draw(){
+
+            ctx.fillStyle =
+                "rgba(96, 165, 250, 0.5)";
+
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+
+            ctx.arc(
+                this.x,
+                this.y,
+                this.radius,
+                0,
+                Math.PI * 2
+            );
+
             ctx.fill();
         }
+
     }
- 
+
+
     const particles = [];
-    const particleCount = Math.floor(Math.min(window.innerWidth, window.innerHeight) / 10);
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
+
+    const particleCount =
+        Math.floor(
+            Math.min(
+                window.innerWidth,
+                window.innerHeight
+            ) / 10
+        );
+
+
+    for(
+        let i = 0;
+        i < particleCount;
+        i++
+    ){
+
+        particles.push(
+            new Particle()
+        );
+
     }
- 
-    function drawConnections() {
+
+
+    function drawConnections(){
+
         const maxDistance = 200;
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                if (distance < maxDistance) {
-                    const opacity = (1 - distance / maxDistance) * 0.3;
-                    ctx.strokeStyle = `rgba(96, 165, 250, ${opacity})`;
+
+
+        for(
+            let i = 0;
+            i < particles.length;
+            i++
+        ){
+
+            for(
+                let j = i + 1;
+                j < particles.length;
+                j++
+            ){
+
+                const dx =
+                    particles[i].x -
+                    particles[j].x;
+
+                const dy =
+                    particles[i].y -
+                    particles[j].y;
+
+                const distance =
+                    Math.sqrt(
+                        dx * dx +
+                        dy * dy
+                    );
+
+
+                if(distance < maxDistance){
+
+                    const opacity =
+                        (1 -
+                        distance /
+                        maxDistance) *
+                        0.3;
+
+
+                    ctx.strokeStyle =
+                        `rgba(96, 165, 250, ${opacity})`;
+
                     ctx.lineWidth = 1;
+
                     ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
+
+                    ctx.moveTo(
+                        particles[i].x,
+                        particles[i].y
+                    );
+
+                    ctx.lineTo(
+                        particles[j].x,
+                        particles[j].y
+                    );
+
                     ctx.stroke();
                 }
+
             }
+
         }
+
     }
- 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(particle => {
-            particle.update();
-            particle.draw();
-        });
+
+
+    function animate(){
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+
+        particles.forEach(
+            particle => {
+
+                particle.update();
+
+                particle.draw();
+
+            }
+        );
+
+
         drawConnections();
-        requestAnimationFrame(animate);
+
+        requestAnimationFrame(
+            animate
+        );
     }
- 
+
+
     animate();
- 
-    // ==================== TYPEWRITER EFFECT ====================
-    const typewriterElement = document.getElementById('typewriter');
+
+
+
+    // ==================== TYPEWRITER ====================
+
+    const typewriterElement =
+        document.getElementById("typewriter");
+
+
     const phrases = [
-        'Machine Learning & Data Science',
-        'Building AI-powered applications',
-        'CS + Math + Digital Marketing',
-        'Exploring NLP for Nepali'
+
+        "Machine Learning & Data Science",
+
+        "Building AI-powered applications",
+
+        "CS + Math + Digital Marketing",
+
+        "Exploring NLP for Nepali"
+
     ];
- 
+
+
     let phraseIndex = 0;
+
     let charIndex = 0;
+
     let isDeleting = false;
+
     let typingSpeed = 50;
+
     let deletingSpeed = 30;
+
     let pauseTime = 2000;
- 
-    function typewriter() {
-        const currentPhrase = phrases[phraseIndex];
-        if (!isDeleting) {
-            typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+
+
+    function typewriter(){
+
+        const currentPhrase =
+            phrases[phraseIndex];
+
+
+        if(!isDeleting){
+
+            typewriterElement.textContent =
+                currentPhrase.substring(
+                    0,
+                    charIndex + 1
+                );
+
             charIndex++;
-            if (charIndex === currentPhrase.length) {
+
+
+            if(
+                charIndex ===
+                currentPhrase.length
+            ){
+
                 isDeleting = true;
-                setTimeout(typewriter, pauseTime);
+
+                setTimeout(
+                    typewriter,
+                    pauseTime
+                );
+
                 return;
             }
-            setTimeout(typewriter, typingSpeed);
+
+
+            setTimeout(
+                typewriter,
+                typingSpeed
+            );
+
+
         } else {
-            typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+
+
+            typewriterElement.textContent =
+                currentPhrase.substring(
+                    0,
+                    charIndex - 1
+                );
+
+
             charIndex--;
-            if (charIndex === 0) {
+
+
+            if(charIndex === 0){
+
                 isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                setTimeout(typewriter, 500);
+
+                phraseIndex =
+                    (phraseIndex + 1) %
+                    phrases.length;
+
+
+                setTimeout(
+                    typewriter,
+                    500
+                );
+
                 return;
             }
-            setTimeout(typewriter, deletingSpeed);
+
+
+            setTimeout(
+                typewriter,
+                deletingSpeed
+            );
+
         }
+
     }
- 
-    setTimeout(typewriter, 500);
+
+
+    setTimeout(
+        typewriter,
+        500
+    );
+
 </script>
- 
+
+
+
+<!-- ==================== CONTACT FORM ==================== -->
+
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxRN0jlDB3eIHOPuNEFjCn4Ay-tlCFYo_xGkNqCAokeyAqrmCfRYdUjOSsofWm04RWtzA/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxRN0jlDB3eIHOPuNEFjCn4Ay-tlCFYo_xGkNqCAokeyAqrmCfRYdUjOSsofWm04RWtzA/exec";
+
+
+    const form =
+        document.forms[
+            "submit-to-google-sheet"
+        ];
+
+
+    const msg =
+        document.getElementById("msg");
+
+
+    form.addEventListener(
+        "submit",
+        e => {
+
+            e.preventDefault();
+
+
+            fetch(
+                scriptURL,
+                {
+                    method: "POST",
+                    body: new FormData(form)
+                }
+            )
+
             .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                }, 5000)
-                form.reset()
+
+                msg.innerHTML =
+                    "Message sent successfully";
+
+
+                setTimeout(
+                    function(){
+
+                        msg.innerHTML = "";
+
+                    },
+                    5000
+                );
+
+
+                form.reset();
+
             })
-            .catch(error => console.error('Error!', error.message))
-    })
+
+            .catch(
+                error =>
+                    console.error(
+                        "Error!",
+                        error.message
+                    )
+            );
+
+        }
+    );
+
 </script>
- 
-</body> 
+
+
+</body>
 </html>
