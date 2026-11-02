@@ -1192,7 +1192,7 @@
 
                 <p>
                     <i class="fa-solid fa-paper-plane"></i>
-                    prabinroka2004@gmail.com
+                    <a class="contact-email-address" href="mailto:prabinroka2004@gmail.com">prabinroka2004@gmail.com</a>
                 </p>
 
                 <p>
@@ -1264,16 +1264,19 @@
                     <input type="text"
                            name="Name"
                            placeholder="Your Name"
+                           autocomplete="name"
                            required>
 
                     <input type="email"
                            name="Email"
                            placeholder="Your Email"
+                           autocomplete="email"
                            required>
 
                     <textarea name="Message"
                               rows="6"
-                              placeholder="Your Message"></textarea>
+                              placeholder="Your Message"
+                              required></textarea>
 
                     <button type="submit"
                             class="btn btn2">
@@ -1282,7 +1285,11 @@
 
                 </form>
 
-                <span id="msg"></span>
+                <p id="msg" role="status" aria-live="polite" aria-atomic="true"></p>
+                <a id="contact-email-fallback"
+                   class="contact-email-fallback"
+                   href="mailto:prabinroka2004@gmail.com"
+                   hidden>Send this message with your email app instead</a>
 
             </div>
 
@@ -1837,69 +1844,72 @@
 
 
 <!-- ==================== CONTACT FORM ==================== -->
-
 <script>
-
+    // Google Apps Script handles this static GitHub Pages form.
     const scriptURL =
         "https://script.google.com/macros/s/AKfycbxRN0jlDB3eIHOPuNEFjCn4Ay-tlCFYo_xGkNqCAokeyAqrmCfRYdUjOSsofWm04RWtzA/exec";
 
+    const form = document.forms["submit-to-google-sheet"];
+    const msg = document.getElementById("msg");
+    const submitButton = form.querySelector('button[type="submit"]');
+    const emailFallback = document.getElementById("contact-email-fallback");
 
-    const form =
-        document.forms[
-            "submit-to-google-sheet"
-        ];
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
+        const formData = new FormData(form);
+        const name = String(formData.get("Name") || "").trim();
+        const email = String(formData.get("Email") || "").trim();
+        const message = String(formData.get("Message") || "").trim();
 
-    const msg =
-        document.getElementById("msg");
+        // Keep a usable backup even if the Google Apps Script is unavailable.
+        const subject = encodeURIComponent("Portfolio contact from " + name);
+        const body = encodeURIComponent(
+            "Name: " + name + "\nEmail: " + email + "\n\n" + message
+        );
+        emailFallback.href =
+            "mailto:prabinroka2004@gmail.com?subject=" + subject + "&body=" + body;
+        emailFallback.hidden = true;
 
+        submitButton.disabled = true;
+        const buttonLabel = submitButton.textContent;
+        submitButton.textContent = "Sending...";
+        msg.className = "";
+        msg.textContent = "Sending your message...";
 
-    form.addEventListener(
-        "submit",
-        e => {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000);
 
-            e.preventDefault();
+        try {
+            // Apps Script can redirect across domains without CORS headers.
+            // no-cors lets the browser POST the form, but returns an opaque
+            // response: it is NOT proof that the message was delivered.
+            await fetch(scriptURL, {
+                method: "POST",
+                mode: "no-cors",
+                body: formData,
+                signal: controller.signal
+            });
 
-
-            fetch(
-                scriptURL,
-                {
-                    method: "POST",
-                    body: new FormData(form)
-                }
-            )
-
-            .then(response => {
-
-                msg.innerHTML =
-                    "Message sent successfully";
-
-
-                setTimeout(
-                    function(){
-
-                        msg.innerHTML = "";
-
-                    },
-                    5000
-                );
-
-
-                form.reset();
-
-            })
-
-            .catch(
-                error =>
-                    console.error(
-                        "Error!",
-                        error.message
-                    )
-            );
-
+            msg.className = "is-info";
+            msg.textContent =
+                "Your submission was sent to the contact service, but delivery " +
+                "can't be confirmed here. You can also email me directly below.";
+            // Keep the entered message available for the email fallback.
+            emailFallback.hidden = false;
+        } catch (error) {
+            msg.className = "is-error";
+            msg.textContent =
+                "The contact service isn't responding. Please use the email " +
+                "option below to send your message instead.";
+            emailFallback.hidden = false;
+            console.error("Contact form submission failed:", error);
+        } finally {
+            clearTimeout(timeoutId);
+            submitButton.disabled = false;
+            submitButton.textContent = buttonLabel;
         }
-    );
-
+    });
 </script>
 
 
