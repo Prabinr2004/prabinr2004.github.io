@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Thanks for reaching out | Prabin Roka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .thankyou-page{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 30px clamp(20px, 6vw, 72px);
+            background: radial-gradient(circle at 50% 25%, #152442, #0a0e1a 65%);
+        }
+        .thankyou-brand{
+            color: #93c5fd;
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: baseline;
+            gap: 12px;
+            width: fit-content;
+        }
+        .thankyou-brand span{
+            color: #d1d5db;
+            font-size: 13px;
+            letter-spacing: 0;
+            font-weight: 500;
+        }
+        .thankyou-main{
+            flex: 1;
+            display: grid;
+            place-items: center;
+        }
+        .thankyou-card{
+            width: 100%;
+            max-width: 560px;
+            padding: clamp(28px, 5vw, 58px);
+            text-align: center;
+            border: 1px solid rgba(96,165,250,0.22);
+            border-radius: 20px;
+            background: rgba(20, 27, 43, 0.93);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+        }
+        .thankyou-icon{
+            display: grid;
+            place-items: center;
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 28px;
+            border-radius: 50%;
+            background: rgba(96,165,250,.14);
+            border: 1px solid rgba(96,165,250,.45);
+            color: #93c5fd;
+            font-size: 34px;
+        }
+        .thankyou-card h1{
+            font-size: clamp(25px, 4vw, 36px);
+            letter-spacing: -.7px;
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+        .thankyou-card p{
+            color: #aab6c9;
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+        .thankyou-back{
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 9px;
+            background: #60a5fa;
+            color: #0a0e1a;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .thankyou-back:hover{background:#93c5fd}
+        .thankyou-footer{
+            font-size: 12px;
+            color: #7f8a9c;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="thankyou-page">
+    <a class="thankyou-brand" href="./">PR <span>Prabin Roka</span></a>
+    <main class="thankyou-main">
+        <div class="thankyou-card">
+            <div class="thankyou-icon" aria-hidden="true">✓</div>
+            <h1>Thanks for reaching out!</h1>
+            <p>Your form was submitted to the contact service. I appreciate your message and look forward to connecting.</p>
+            <a class="thankyou-back" href="./#contact">Back to my website</a>
+        </div>
+    </main>
+    <footer class="thankyou-footer">© 2026 Prabin Roka</footer>
+</body>
+</html>
